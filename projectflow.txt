@@ -1,3 +1,12 @@
 Create git repo and clone it in local.
 Create mycode.py and add code to it.(it will save a csv file to a new "data" folder ) 
 Do a git add-commit-push before initializing dvc
+#pip install dvc
+now we do "dvc init" (creates .dvcignore,.dvc)
+now do "mkdir S3" (creates a new S3 directory)
+now we do "dvc remote add -d myremote S3"---->here this we are calling remote as a name so in that remote is saperate storage of DVC to store data versioning
+next "dvc add data/"---> this command will tell that what ever data is changing in data folder it is responsibility of DVC only...  
+      now it will ask to do: ("git rm -r --cached'data'" and "git commit -m "stop tracking data"")
+      Because initially we were tracking data/ folder from git so now we remove it for DVC to handle..
+Again we do "dvc add data/" (creates data.dvc) then "git add .gitignore data.dvc"      
+ 
