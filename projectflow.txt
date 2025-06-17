@@ -10,5 +10,7 @@ next "dvc add data/"---> this command will tell that what ever data is changing 
       Because initially we were tracking data/ folder from git so now we remove it for DVC to handle..
 Again we do "dvc add data/" (creates data.dvc) then "git add .gitignore data.dvc"  
 now - "dvc commit" and then "dvc push"
-Do a git add-commit-push to mark this stage as first version of data    
+Do a git add-commit-push to mark this stage as first version of data...
+now make changes to mycode.py to append a new row in data, check changes via "dvc status"  
+Again --"dvc commit" and then "dvc push"
  
